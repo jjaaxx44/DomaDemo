@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0026F39323F281BC00B034EC /* MoveInMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F39223F281BC00B034EC /* MoveInMainScreen.swift */; };
 		0026F39523F2834200B034EC /* ProcessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F39423F2834200B034EC /* ProcessRow.swift */; };
+		00B85C0C23F29DF5003CFB6C /* CommonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B85C0B23F29DF5003CFB6C /* CommonViews.swift */; };
 		00D0B85A23F27F2300A19BE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D0B85923F27F2300A19BE1 /* AppDelegate.swift */; };
 		00D0B85C23F27F2300A19BE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D0B85B23F27F2300A19BE1 /* SceneDelegate.swift */; };
 		00D0B85E23F27F2300A19BE1 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D0B85D23F27F2300A19BE1 /* MainTabView.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		0026F39223F281BC00B034EC /* MoveInMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveInMainScreen.swift; sourceTree = "<group>"; };
 		0026F39423F2834200B034EC /* ProcessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessRow.swift; sourceTree = "<group>"; };
+		00B85C0B23F29DF5003CFB6C /* CommonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViews.swift; sourceTree = "<group>"; };
 		00D0B85623F27F2300A19BE1 /* DomaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DomaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D0B85923F27F2300A19BE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00D0B85B23F27F2300A19BE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 			path = "Movin Process";
 			sourceTree = "<group>";
 		};
+		00B85C0A23F29DB5003CFB6C /* CommonsViews */ = {
+			isa = PBXGroup;
+			children = (
+				00B85C0B23F29DF5003CFB6C /* CommonViews.swift */,
+			);
+			path = CommonsViews;
+			sourceTree = "<group>";
+		};
 		00D0B84D23F27F2300A19BE1 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 		00D0B85823F27F2300A19BE1 /* DomaDemo */ = {
 			isa = PBXGroup;
 			children = (
+				00B85C0A23F29DB5003CFB6C /* CommonsViews */,
 				0026F39123F2807300B034EC /* Movin Process */,
 				00D0B85923F27F2300A19BE1 /* AppDelegate.swift */,
 				00D0B85B23F27F2300A19BE1 /* SceneDelegate.swift */,
@@ -161,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00D0B85A23F27F2300A19BE1 /* AppDelegate.swift in Sources */,
+				00B85C0C23F29DF5003CFB6C /* CommonViews.swift in Sources */,
 				00D0B85C23F27F2300A19BE1 /* SceneDelegate.swift in Sources */,
 				0026F39523F2834200B034EC /* ProcessRow.swift in Sources */,
 				0026F39323F281BC00B034EC /* MoveInMainScreen.swift in Sources */,

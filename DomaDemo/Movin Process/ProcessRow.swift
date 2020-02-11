@@ -14,9 +14,39 @@ struct ProcessRow: View {
     
     var body: some View {
         HStack {
+            ZStack{
+                if data.isDone {
+                    BulletShape()
+                        .frame(width: 75.0, height: 50.0)
+                        .foregroundColor(Color.yellow)
+                    
+                    Image(systemName: "checkmark")
+                        .padding(.trailing)
+                        .font(.title)
+                        .foregroundColor(.white)
+                } else {
+                    BulletShape()
+                        .frame(width: 75.0, height: 50.0)
+                        .foregroundColor(Color.white)
+                    
+                    HStack{
+                        Image(systemName: "circle.fill")
+                            .font(.system(size: 5))
+                            .foregroundColor(.yellow)
+                        Image(systemName: "circle.fill")
+                            .font(.system(size: 5))
+                            .foregroundColor(.yellow)
+                        Image(systemName: "circle.fill")
+                            .font(.system(size: 5))
+                            .foregroundColor(.yellow)
+                    }
+                    .padding(.trailing)
+                }
+                
+            }
             VStack(alignment: .leading) {
                 Text(data.title)
-                    .font(.body)
+                    .font(.system(size: 20))
                     .padding(.bottom)
                 Text("Pay by ").font(.caption).foregroundColor(.gray)
                     + Text(data.time).font(.caption).bold()
@@ -26,7 +56,7 @@ struct ProcessRow: View {
             Image(systemName: "chevron.right")
                 .foregroundColor(.gray)
         }
-        .padding(.all, 30)
+        .padding([.top, .bottom, .trailing], 30)
         .background(/*@START_MENU_TOKEN@*/Color(red: 0.968, green: 0.968, blue: 0.981)/*@END_MENU_TOKEN@*/)
     }
 }

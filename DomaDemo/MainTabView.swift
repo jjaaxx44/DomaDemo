@@ -22,7 +22,8 @@ struct MainTabView: View {
         TabView(selection: $selection){
             MoveInMainScreen()
                 .font(.title)
-                .tabItem {
+                .tabItem
+                {
                     VStack {
                         Image(systemName: "house")
                         Text("Move-in")
