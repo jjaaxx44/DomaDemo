@@ -14,7 +14,8 @@ enum ProcessType {
     case document
 }
 
-struct RowData {
+struct RowData: Identifiable{
+    var id = UUID().uuidString
     let title: String
     let type: ProcessType
     let time: String
@@ -28,6 +29,7 @@ let row3 = RowData(title: "Papers I: Registraion", type: .document, time: "15 Fe
 let row4 = RowData(title: "Deposit Payment", type: .payment, time: "15 Feb 2020", endTime: "12:00 (noon)", isDone: false)
 let row5 = RowData(title: "Papers II: Move-in", type: .document, time: "15 Feb 2020", endTime: "12:00 (noon)", isDone: false)
 
+let allRows = [row1, row2, row3, row4, row5]
 
 struct MoveInMainScreen: View {
     
@@ -35,6 +37,7 @@ struct MoveInMainScreen: View {
         UITableView.appearance().separatorStyle = .none
         UITableView.appearance().backgroundColor = .clear
         UITableViewCell.appearance().backgroundColor = .clear
+        UITableViewCell.appearance().selectionStyle = .none
     }
     
     var body: some View {
@@ -56,20 +59,15 @@ struct MoveInMainScreen: View {
                     }
                     line
                     List {
-                        NavigationLink(destination: Text(row1.title)) {
-                            ProcessRow(data: row1)
-                        }
-                        NavigationLink(destination: Text(row2.title)) {
-                            ProcessRow(data: row2)
-                        }
-                        NavigationLink(destination: Text(row3.title)) {
-                            ProcessRow(data: row3)
-                        }
-                        NavigationLink(destination: Text(row4.title)) {
-                            ProcessRow(data: row4)
-                        }
-                        NavigationLink(destination: Text(row5.title)) {
-                            ProcessRow(data: row5)
+                        
+                        ForEach(allRows) { row in
+                            ZStack {
+                                ProcessRow(rowData: row)
+                                NavigationLink(destination: Text(row1.title)) {
+                                    EmptyView()
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                            }
                         }
                     }
                 }

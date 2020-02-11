@@ -10,12 +10,12 @@ import SwiftUI
 
 struct ProcessRow: View {
     
-    let data: RowData
+    let rowData: RowData
     
     var body: some View {
         HStack {
             ZStack{
-                if data.isDone {
+                if rowData.isDone {
                     BulletShape()
                         .frame(width: 75.0, height: 50.0)
                         .foregroundColor(Color.yellow)
@@ -45,12 +45,12 @@ struct ProcessRow: View {
                 
             }
             VStack(alignment: .leading) {
-                Text(data.title)
+                Text(rowData.title)
                     .font(.system(size: 20))
                     .padding(.bottom)
                 Text("Pay by ").font(.caption).foregroundColor(.gray)
-                    + Text(data.time).font(.caption).bold()
-                    + Text(", " + data.endTime).font(.caption).foregroundColor(.gray)
+                    + Text(rowData.time).font(.caption).bold()
+                    + Text(", " + rowData.endTime).font(.caption).foregroundColor(.gray)
             }
             Spacer()
             Image(systemName: "chevron.right")
@@ -58,11 +58,12 @@ struct ProcessRow: View {
         }
         .padding([.top, .bottom, .trailing], 30)
         .background(/*@START_MENU_TOKEN@*/Color(red: 0.968, green: 0.968, blue: 0.981)/*@END_MENU_TOKEN@*/)
+        .cornerRadius(5.0)
     }
 }
 
 struct ProcessRow_Previews: PreviewProvider {
     static var previews: some View {
-        ProcessRow(data: row1)
+        ProcessRow(rowData: row1)
     }
 }
