@@ -21,10 +21,21 @@ struct MoveInDetailsScreen: View {
 
         UISegmentedControl.appearance().setDividerImage(UIColor.white.image(CGSize(width: 1.0, height: 32.0)), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
     }
-        
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     var body: some View {
         VStack {
             HStack{
+                Button(action: {
+                    self.mode.wrappedValue.dismiss()
+                })
+                {
+                    Text("<")
+                        .padding()
+                        .foregroundColor(.blue)
+                }
+                
                 Text("Move-in process")
                     .font(.largeTitle)
                     .padding()
