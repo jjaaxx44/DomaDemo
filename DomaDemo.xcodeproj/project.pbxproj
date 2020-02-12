@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0026F39323F281BC00B034EC /* MoveInMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F39223F281BC00B034EC /* MoveInMainScreen.swift */; };
 		0026F39523F2834200B034EC /* ProcessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F39423F2834200B034EC /* ProcessRow.swift */; };
+		002DDA7023F3B03C003085E9 /* MoveInDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002DDA6F23F3B03C003085E9 /* MoveInDetailsScreen.swift */; };
+		002DDA7323F3B8F3003085E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002DDA7223F3B8F3003085E9 /* Extensions.swift */; };
+		002DDA7523F3D6AA003085E9 /* Contstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002DDA7423F3D6AA003085E9 /* Contstants.swift */; };
 		00B85C0C23F29DF5003CFB6C /* CommonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B85C0B23F29DF5003CFB6C /* CommonViews.swift */; };
 		00D0B85A23F27F2300A19BE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D0B85923F27F2300A19BE1 /* AppDelegate.swift */; };
 		00D0B85C23F27F2300A19BE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D0B85B23F27F2300A19BE1 /* SceneDelegate.swift */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		0026F39223F281BC00B034EC /* MoveInMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveInMainScreen.swift; sourceTree = "<group>"; };
 		0026F39423F2834200B034EC /* ProcessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessRow.swift; sourceTree = "<group>"; };
+		002DDA6F23F3B03C003085E9 /* MoveInDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveInDetailsScreen.swift; sourceTree = "<group>"; };
+		002DDA7223F3B8F3003085E9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		002DDA7423F3D6AA003085E9 /* Contstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contstants.swift; sourceTree = "<group>"; };
 		00B85C0B23F29DF5003CFB6C /* CommonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViews.swift; sourceTree = "<group>"; };
 		00D0B85623F27F2300A19BE1 /* DomaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DomaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D0B85923F27F2300A19BE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,10 +52,20 @@
 		0026F39123F2807300B034EC /* Movin Process */ = {
 			isa = PBXGroup;
 			children = (
+				002DDA6F23F3B03C003085E9 /* MoveInDetailsScreen.swift */,
 				0026F39223F281BC00B034EC /* MoveInMainScreen.swift */,
 				0026F39423F2834200B034EC /* ProcessRow.swift */,
 			);
 			path = "Movin Process";
+			sourceTree = "<group>";
+		};
+		002DDA7123F3B8E5003085E9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				002DDA7223F3B8F3003085E9 /* Extensions.swift */,
+				002DDA7423F3D6AA003085E9 /* Contstants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		00B85C0A23F29DB5003CFB6C /* CommonsViews */ = {
@@ -79,11 +95,12 @@
 		00D0B85823F27F2300A19BE1 /* DomaDemo */ = {
 			isa = PBXGroup;
 			children = (
-				00B85C0A23F29DB5003CFB6C /* CommonsViews */,
-				0026F39123F2807300B034EC /* Movin Process */,
 				00D0B85923F27F2300A19BE1 /* AppDelegate.swift */,
+				0026F39123F2807300B034EC /* Movin Process */,
 				00D0B85B23F27F2300A19BE1 /* SceneDelegate.swift */,
 				00D0B85D23F27F2300A19BE1 /* MainTabView.swift */,
+				002DDA7123F3B8E5003085E9 /* Helpers */,
+				00B85C0A23F29DB5003CFB6C /* CommonsViews */,
 				00D0B85F23F27F2600A19BE1 /* Assets.xcassets */,
 				00D0B86423F27F2600A19BE1 /* LaunchScreen.storyboard */,
 				00D0B86723F27F2600A19BE1 /* Info.plist */,
@@ -172,8 +189,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				00D0B85A23F27F2300A19BE1 /* AppDelegate.swift in Sources */,
+				002DDA7523F3D6AA003085E9 /* Contstants.swift in Sources */,
 				00B85C0C23F29DF5003CFB6C /* CommonViews.swift in Sources */,
 				00D0B85C23F27F2300A19BE1 /* SceneDelegate.swift in Sources */,
+				002DDA7323F3B8F3003085E9 /* Extensions.swift in Sources */,
+				002DDA7023F3B03C003085E9 /* MoveInDetailsScreen.swift in Sources */,
 				0026F39523F2834200B034EC /* ProcessRow.swift in Sources */,
 				0026F39323F281BC00B034EC /* MoveInMainScreen.swift in Sources */,
 				00D0B85E23F27F2300A19BE1 /* MainTabView.swift in Sources */,

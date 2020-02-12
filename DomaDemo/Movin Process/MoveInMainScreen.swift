@@ -63,7 +63,7 @@ struct MoveInMainScreen: View {
                         ForEach(allRows) { row in
                             ZStack {
                                 ProcessRow(rowData: row)
-                                NavigationLink(destination: Text(row1.title)) {
+                                NavigationLink(destination: MoveInDetailsScreen()) {
                                     EmptyView()
                                 }
                                 .buttonStyle(PlainButtonStyle())

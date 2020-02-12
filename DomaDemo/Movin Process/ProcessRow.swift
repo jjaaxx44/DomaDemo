@@ -18,7 +18,7 @@ struct ProcessRow: View {
                 if rowData.isDone {
                     BulletShape()
                         .frame(width: 75.0, height: 50.0)
-                        .foregroundColor(Color.yellow)
+                        .foregroundColor(domaYellow)
                     
                     Image(systemName: "checkmark")
                         .padding(.trailing)
@@ -32,13 +32,13 @@ struct ProcessRow: View {
                     HStack{
                         Image(systemName: "circle.fill")
                             .font(.system(size: 5))
-                            .foregroundColor(.yellow)
+                            .foregroundColor(domaYellow)
                         Image(systemName: "circle.fill")
                             .font(.system(size: 5))
-                            .foregroundColor(.yellow)
+                            .foregroundColor(domaYellow)
                         Image(systemName: "circle.fill")
                             .font(.system(size: 5))
-                            .foregroundColor(.yellow)
+                            .foregroundColor(domaYellow)
                     }
                     .padding(.trailing)
                 }
@@ -57,7 +57,7 @@ struct ProcessRow: View {
                 .foregroundColor(.gray)
         }
         .padding([.top, .bottom, .trailing], 30)
-        .background(/*@START_MENU_TOKEN@*/Color(red: 0.968, green: 0.968, blue: 0.981)/*@END_MENU_TOKEN@*/)
+        .background(lightGrayBG)
         .cornerRadius(5.0)
     }
 }
